@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\inetpub\wwwroot\SPCReport_New" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="11/28/2014 20:35:02" />
+    <file relUrl="SPCM5.aspx" publishTime="10/07/2014 15:58:01" />
+    <file relUrl="SPCM8.aspx" publishTime="10/07/2014 16:06:22" />
+    <file relUrl="Styles/Site.css" publishTime="05/24/2013 01:00:20" />
+    <file relUrl="SPCM1.aspx" publishTime="11/28/2014 18:29:31" />
+    <file relUrl="Styles/Style.css" publishTime="05/24/2013 01:00:20" />
+    <file relUrl="SPCM4.aspx" publishTime="10/07/2014 15:56:28" />
+    <file relUrl="bin/SPCRpt.dll" publishTime="11/28/2014 20:34:49" />
+    <file relUrl="SPCM2.aspx" publishTime="11/23/2013 15:52:03" />
+    <file relUrl="SPCM6.aspx" publishTime="10/07/2014 16:04:04" />
+    <file relUrl="SPCM3.aspx" publishTime="05/27/2013 03:52:26" />
+    <file relUrl="SPCM7.aspx" publishTime="10/07/2014 16:05:25" />
+    <file relUrl="bin/SPCRpt.pdb" publishTime="11/28/2014 20:34:49" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="03/30/2013 11:37:42" />
+    <file relUrl="Styles/Style_IE.css" publishTime="05/24/2013 01:00:20" />
+  </publishProfile>
+</publishData>

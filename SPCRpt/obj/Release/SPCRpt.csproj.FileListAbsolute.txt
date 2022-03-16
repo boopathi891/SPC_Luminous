@@ -1,0 +1,37 @@
+E:\SPCRpt\SPCRpt\bin\SPCRpt.dll
+E:\SPCRpt\SPCRpt\bin\SPCRpt.pdb
+E:\SPCRpt\SPCRpt\bin\AjaxControlToolkit.dll
+E:\SPCRpt\SPCRpt\obj\Release\ResolveAssemblyReference.cache
+E:\SPCRpt\SPCRpt\obj\Release\RdlCompile.cache
+E:\SPCRpt\SPCRpt\obj\Release\RdlCompile.compiled
+E:\SPCRpt\SPCRpt\obj\Release\SPCRpt.dll
+E:\SPCRpt\SPCRpt\obj\Release\SPCRpt.pdb
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\bin\SPCRpt.dll
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\bin\SPCRpt.pdb
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\obj\Release\ResolveAssemblyReference.cache
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\obj\Release\RdlCompile.cache
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\obj\Release\RdlCompile.compiled
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\obj\Release\SPCRpt.dll
+D:\Boopathi\SPC Final\SPCRpt\SPCRpt\obj\Release\SPCRpt.pdb
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\bin\SPCRpt.dll
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\bin\SPCRpt.pdb
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\bin\AjaxControlToolkit.dll
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\ResolveAssemblyReference.cache
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.cache
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.compiled
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.dll
+E:\Projects\Boopathi\SPC Final\latest\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.pdb
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\bin\SPCRpt.dll
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\bin\SPCRpt.pdb
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\bin\AjaxControlToolkit.dll
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.cache
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.compiled
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.dll
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-22-01-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.pdb
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\bin\SPCRpt.dll
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\bin\SPCRpt.pdb
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\bin\AjaxControlToolkit.dll
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.cache
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.compiled
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.dll
+E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.pdb

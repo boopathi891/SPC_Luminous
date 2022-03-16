@@ -1,0 +1,326 @@
+﻿body 
+{
+    
+}
+
+.lblText
+{
+     font-size:12px;
+	 font-family:Arial;
+	 height:16px;
+	 color:#054d95;
+	 font-weight:500;
+}
+h5
+{
+     font-family:Arial;
+	 color:#57719c;
+	 font-weight:500;
+}
+
+a
+{
+    text-decoration:none;
+}
+a:hover
+{
+    color:Red;
+}
+b
+{
+	color:#0661ba;
+}
+#wrap
+{
+	margin:0px;
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+	width:900px;
+	background:#eee;
+	min-height:710px;	
+}
+#Logo
+{
+	float:left;
+	/*background:url('images/exide_logo1.jpg') no-repeat; */
+	margin-top:3px;
+	margin-left:15px;
+	width:150px;
+	height:40px;
+	color:#7da3ca;
+}
+#Header_Text
+{
+	float:left;
+	height:30px;
+	width:520px;
+}  
+#Top_Navigation
+{
+	background:#eee;
+	float:left;
+	width:100%;
+	height:50px;
+	border-bottom-style:solid;
+	border-bottom-width:3px;
+	border-bottom-color:#2f358a;
+}
+
+#loginPage
+{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:350px;
+	height:200px;
+	background:#fff;
+	border-style:solid;
+	border-color:#fff;
+	border-width:2px;
+	margin-top:50px;
+}
+
+#footer
+{
+    margin-left:auto;
+	margin-right:auto;
+	width:900px;
+	height:40px;
+    background:#d0d0d0;
+    text-align:right;
+    color:#aeaeae;
+    
+}
+
+#Header_Links
+{
+	float:right;
+	height:30px;
+	text-align:right;
+	color:#807c79;
+}        
+.label
+{
+	 font-size:12px;
+	 font-family:Arial;
+	 font-weight:bold; 
+	 height:16px;
+	 color:#0768c9;
+}
+.error
+{
+	color:#da0000 !important;
+	
+}
+
+.savebutton
+{
+	width:75px;
+	height:28px;
+    color:#fff;
+    text-align:center; 
+    text-decoration:none; 
+    border:2px solid #757575; 
+    background:#4d67a2;
+}
+
+.textbox, .txtTextBox
+{
+	border: 1.5px solid #abc3d7;
+	font-size:14px;
+	font-family:Arial;
+	color:#000;
+	font-weight:normal;
+    margin-left: 0px;
+}
+
+
+#LeftContentArea
+{
+    width:200px;
+    background:#d0d0d0;
+    min-height:614px;
+    float:left;
+    margin:4px 0px 0px 5px;
+}
+
+#RightContentArea
+{
+    width:93%;
+    background:#fff;
+  /*  overflow:scroll; */
+    float:right;
+    margin-top:4px;
+    height:568px;
+}
+
+#CenterContentArea
+{
+    width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#eee;
+    min-height:614px;
+    margin-top:4px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#fff;
+}
+#MainContent
+{
+    width:100%;
+    background:#eee;
+    min-height:614px;
+    float:left;
+    margin-top:4px;
+}
+#ButtonArea, #ButtonArea1
+{
+    border-bottom: 1px solid #2f358a;
+	width:100%;
+    height:36px;
+    float:left;
+    margin-top:4px;
+    border-left-color: #2f358a;
+	border-right-color: #2f358a;
+	border-top-color: #2f358a;
+}
+
+.btnDesign
+{
+    width:80px;
+    background:#fff;
+    height:25px; 
+}
+
+.btnDesign_New
+{
+   background:#f0f0f0 url('images/refresh.png') no-repeat; 
+}
+
+
+
+.btnAdd
+{
+    background:#f0f0f0 url('images/add_new.png') no-repeat center;
+    height:20px; 
+    border-style:solid;
+    border-width:1px;
+    border-color:#426c95;
+}
+
+.btnDesign_Print
+{
+    width:80px;
+  /*   background:#fff url('images/Printer-Icon.png') no-repeat;*/
+ 
+   
+}
+
+.btnDesign_Save
+{
+ 
+    background:#f0f0f0 url('images/save.png') no-repeat; 
+   
+}
+
+.lblMessage
+{
+    color:Red;
+}
+
+.btnDesign_Delete
+{
+   background:#f0f0f0 url('images/Trash.png') no-repeat;
+ 
+}
+.btnBackUp
+{
+	  background:#f0f0f0 url('images/dbBackup.gif') no-repeat;
+}
+.btnDesign_Clear
+{
+    width:80px;
+   /* background:#fff url('images/Clear-Icon.png') no-repeat; */
+    background-position:left;
+    height:25px; 
+    float:right;
+    margin-left:5px;
+}
+.btnExcelExport
+{
+	  background:#f0f0f0 url('images/table_excel.png') no-repeat; 
+}
+
+
+.btnSentEmail, .btnSentEmail1
+{
+	  background:#f0f0f0 url('images/Email.jpg') no-repeat; 
+}
+
+.btnGetStatus
+{
+	 background:#f0f0f0 url('images/Actions-edit-redo-icon.png') no-repeat; 
+	
+}
+
+.btnDesign_New, .btnDesign_Save, .btnDesign_Print, .btnExcelExport, .btnDesign_Delete, .btnSentEmail, .btnGetStatus, .btnBackUp, .btnSentEmail1
+{
+	border: 1px solid #426c95;
+    width:85px;
+    background-position:5px;
+    color:#054d95;
+    float:right;
+    margin-left:5px;
+    margin-right:5px;
+}
+.hyperlink
+{
+	height:25px;
+	color:Black;
+	float:right;
+
+}
+.lblSiteMap
+{
+     font-size:12px;
+	 font-family:Arial;
+	 color:#f9970e;
+	 font-weight:normal;
+}
+
+.modelPopUp
+{
+	background:#eeeeee;
+	min-height:150px;
+}
+
+.modelPopUp
+
+{
+	z-index:1;
+}
+
+.btnLinkButton
+{
+	font-size:14px;
+	text-decoration:none;
+	color:#054d95;
+	
+}
+.pager
+{
+	
+background-color:Black;
+font-weight:bold;
+font-size:10pt;
+
+} 
+
+.lblHText
+{
+	font-weight:normal;
+	color:#054d95;
+	font-size:14px;
+}

@@ -1,0 +1,428 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+body   
+{
+    background:#efefef; /* url('images/bg.gif') repeat-x;  */
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    text-transform:none;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+h1
+{
+     font-weight: 400;
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+    color: #045c9e;
+    border: none;
+    line-height: 1em;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+
+
+h2
+{
+    font-size:18px;
+    font-weight: 600;
+    text-transform:none;
+    color: #016db1;
+    
+}
+
+h3
+{
+    font-size:18px;
+    font-weight:500;
+    color: #045c9e;
+    
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 100%;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+    height:750px;
+}
+.page1
+{
+    width: 960px;
+   background-color: #fff;
+    margin: 0px auto 0px 0px;
+    min-height:600px;
+    border: 1px solid #496077;
+}
+
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: url('images/Header_Bg.jpg') repeat-x;
+    width: 100%;
+    height:80px;
+}
+
+.header h1
+{
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+    color: #045c9e;
+    border: none;
+    line-height: 1em;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 600px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+.Hide 
+{
+	 display: none;
+	 
+ }
+
+.Show 
+{
+	 display: block;
+	
+	
+ }
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background:url('images/Nav_Bg.gif') repeat-x;
+    width:100%;
+	height: 35px;
+}
+
+div.menu
+{
+    padding:4px,0px,4px,8px;
+    z-index: 1020;   /*  Sends all div and reports to back. Menu will be projected front */
+    position: absolute;
+    margin-top:-15px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    /*background-color: #465c71;
+    border: 1px #4e667d solid; */
+    background:url('images/Nav_Bg_Link.gif') repeat-x;
+    color: #fff;
+    display: block;
+    line-height: 1.35em;
+    padding:5px 30px 5px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index:1000;
+    height:20px;
+    border-right-style:solid;
+    border-right-width:1px;
+    border-right-color:#023552;
+    border-bottom:1px solid #023552;
+
+}
+
+div.menu ul li a:hover
+{
+  
+    color:#000;
+    background:#c9cbcd;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title_cdc
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.title
+{
+     display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color:#045c9e;
+}
+
+.loginDisplay a:link
+{
+    color: #045c9e;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: red;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+#menu10 {
+	width: 240px;
+	margin-left:-0px;
+    height: 298px;
+}
+	
+#menu10 li a {
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 24px;
+	text-decoration: none;
+	text-align:center;
+	
+	}	
+	
+#menu10 li a:link, #menu10 li a:visited {
+	color: #000;
+	display: block;
+	background:  url('images/menu10.gif');
+	padding: 8px 0 0 10px;
+	margin-bottom:5px;
+	}
+	
+#menu10 li a:hover {
+	color:Blue;
+	font-weight:bolder;
+	background:  url('images/menu10.gif') 0 -32px;
+	padding: 8px 0 0 10px;
+	}
+	li
+	{
+		list-style-type: none; 
+	}
+
+#menu11 {
+	width: 241px;
+	margin-left:0px;
+    height: 149px;
+}
+	
+#menu11 li a {
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 24px;
+	text-decoration: none;
+	text-align:center;
+	
+	}	
+	
+#menu11 li a:link, #menu11 li a:visited {
+	color: #000;
+	display: block;
+	background:  url('images/menu10.gif');
+	padding: 8px 0 0 10px;
+	margin-bottom:5px;
+	}
+	
+#menu11 li a:hover {
+	color:Blue;
+	font-weight:bolder;
+	background:  url('images/menu10.gif') 0 -32px;
+	padding: 8px 0 0 10px;
+	}
+	li
+	{
+		list-style-type: none; 
+	}
