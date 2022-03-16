@@ -43,3 +43,13 @@ D:\Balraj\OneDrive\Projects\Exide\Latest\SPC\SPC_HSR_VRLA\SPCRpt(VRLA)\SPCRpt\ob
 D:\Balraj\OneDrive\Projects\Exide\Latest\SPC\SPC_HSR_VRLA\SPCRpt(VRLA)\SPCRpt\obj\Debug\RdlCompile.compiled
 D:\Balraj\OneDrive\Projects\Exide\Latest\SPC\SPC_HSR_VRLA\SPCRpt(VRLA)\SPCRpt\obj\Debug\SPCRpt.dll
 D:\Balraj\OneDrive\Projects\Exide\Latest\SPC\SPC_HSR_VRLA\SPCRpt(VRLA)\SPCRpt\obj\Debug\SPCRpt.pdb
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\bin\SPCRpt.dll.config
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\bin\SPCRpt.dll
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\bin\SPCRpt.pdb
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\RdlCompile.cache
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\RdlCompile.compiled
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.CoreCompileInputs.cache
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.CopyComplete
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.dll
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.pdb
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csprojAssemblyReference.cache

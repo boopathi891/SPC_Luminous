@@ -12,7 +12,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace SPCRpt
 {
-    public partial class SPCM1 : System.Web.UI.Page
+    public partial class SPCM10 : System.Web.UI.Page
     {
         DateTimeFormatInfo dateTimeFormatterProvider = DateTimeFormatInfo.CurrentInfo.Clone() as DateTimeFormatInfo;
         string strCon = System.Configuration.ConfigurationManager.ConnectionStrings["Sqlcon"].ToString();
@@ -20,11 +20,12 @@ namespace SPCRpt
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataAdapter sqlDap = new SqlDataAdapter();
         DataTable dtMachine = new DataTable();
+        DataTable dtProductIds = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                dtMachine = GetMachineID("SPCM1");
+                dtMachine = GetMachineID("SPCM10");
                 ViewState["dtMachine"] = dtMachine;
                 ViewState["B"] = dtMachine.Rows.Count;
                 ViewState["A"] = 0;
@@ -36,6 +37,8 @@ namespace SPCRpt
                     DataTable dt = (DataTable)ViewState["dtMachine"];
                     DataRow dr = dt.Rows[Convert.ToInt32(ViewState["A"])];
                     this.lblMachineId.Text = dr["MachineID"].ToString();
+                    dtProductIds = GetDistinctProductId(this.lblFrom.Text, DateTime.Now.ToString(), "ALL", this.lblMachineId.Text);
+                    ViewState["ProductID"] = dtProductIds;
                     List<ReportParameter> paramList = new List<ReportParameter>();
                     paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                     this.rptTableView.LocalReport.SetParameters(paramList);
@@ -61,15 +64,24 @@ namespace SPCRpt
             this.lblFrom.Text = strShift[1];
             this.lblShift.Text = strShift[0];
             DataTable dt = (DataTable)ViewState["dtMachine"];
-            DataRow dr = dt.Rows[Convert.ToInt32(ViewState["A"])];   
+            DataRow dr = dt.Rows[Convert.ToInt32(ViewState["A"])];
             this.lblMachineId.Text = dr["MachineID"].ToString();
+            DataTable dtProductId = (DataTable)ViewState["ProductID"];
+            if (dtProductId != null && dtProductId.Rows.Count > 0)
+            {
+                Random rnd = new Random();
+                int RandomRow = rnd.Next(1, dtProductId.Rows.Count);
+                DataRow drProductId = dt.Rows[RandomRow];
+                this.ddlProductId.Text = drProductId["Product_Id"].ToString();
+                this.ddlProductType.Text = drProductId["Product_Type"].ToString();
+            }
             List<ReportParameter> paramList = new List<ReportParameter>();
             paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
             this.rptTableView.LocalReport.SetParameters(paramList);
             this.rptTableView.LocalReport.Refresh();
         }
 
-        public string[] GetShiftName()  
+        public string[] GetShiftName()
         {
             DataTable dtTiming = GetShiftTimings();
             string[] strShift = { string.Empty, string.Empty };
@@ -174,5 +186,31 @@ namespace SPCRpt
             return dtMachine;
         }
 
+        public DataTable GetDistinctProductId(string strFromdate, string strTodate, string strProductType, string MachineId)
+        {
+            DataTable dtProductId = new DataTable();
+            try
+            {
+                sqlCon = new SqlConnection(strCon);
+                sqlCon.Open();
+                sqlCmd = new SqlCommand("select distinct Product_Id,Product_Type from tbl_Weight_Thickness_Measuring where Machine_Id=@MachineID and date between @FromDate and @Todate and Product_Type=(CASE WHEN @ProductType='ALL'then Product_Type ELSE @ProductType END) Order by Product_Id", sqlCon);
+                sqlCmd.Parameters.AddWithValue("@MachineID", MachineId);
+                sqlCmd.Parameters.AddWithValue("@FromDate", strFromdate + " 00:00:00.001");
+                sqlCmd.Parameters.AddWithValue("@Todate", strTodate );
+                sqlCmd.Parameters.AddWithValue("@ProductType", strProductType);
+                sqlDap = new SqlDataAdapter(sqlCmd);
+                sqlDap.Fill(dtProductId);
+                return dtProductId;
+            }
+            catch (SqlException sqlExc)
+            {
+                dtProductId = null;
+                return dtProductId;
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
     }
 }
