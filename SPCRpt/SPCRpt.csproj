@@ -93,6 +93,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dtSPC.cs">
+      <DependentUpon>dtSPC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dtSPC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

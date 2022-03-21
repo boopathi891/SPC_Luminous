@@ -49,6 +49,15 @@ namespace SPCRpt {
         protected global::System.Web.UI.Timer Timer1;
         
         /// <summary>
+        /// Timer2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.Timer Timer2;
+        
+        /// <summary>
         /// lblFrom control.
         /// </summary>
         /// <remarks>
@@ -76,22 +85,22 @@ namespace SPCRpt {
         protected global::System.Web.UI.WebControls.Label lblMachineId;
         
         /// <summary>
-        /// ddlProductType control.
+        /// lblProductType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProductType;
+        protected global::System.Web.UI.WebControls.Label lblProductType;
         
         /// <summary>
-        /// ddlProductId control.
+        /// lblProductId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProductId;
+        protected global::System.Web.UI.WebControls.Label lblProductId;
         
         /// <summary>
         /// rptTableView control.

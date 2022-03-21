@@ -1686,7 +1686,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Product_Id.Value, "DataSet1")</Value>
+                      <Value>=Parameters!ProductID.Value</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                         <Color>Purple</Color>
@@ -1791,7 +1791,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Product_Type.Value, "DataSet1")</Value>
+                      <Value>=Parameters!ProductType.Value</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                         <Color>Purple</Color>
@@ -1875,13 +1875,21 @@
         <BottomMargin>1in</BottomMargin>
         <Style />
       </Page>
-  <ReportParameters>
+    <ReportParameters>
     <ReportParameter Name="MachineId">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="ProductID">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ProductType">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
-    <EmbeddedImages>
+  <EmbeddedImages>
     <EmbeddedImage Name="Luminous">
       <MIMEType>image/jpeg</MIMEType>
       <ImageData>iVBORw0KGgoAAAANSUhEUgAAANcAAAAwCAYAAACCPO+PAAAABHNCSVQICAgIfAhkiAAAH0tJREFUeJztfXmUnUd15+/equ9773W3WlJr9yZZljEWqzGYYBZhG8VjiMNAIg/JmZyEYTG2sQgeCDNAjtAMzoSEYJDtMGaYJDNzDkOshMww7JbtNBhMDAZCjEC2Frdky1pbWy/vfV/V/c0fX6vVT/22Vrcso8PvnP6jX1XdWr66dW/dunVLcPm6rt5kdll8mQBgJdNzcQJHQiKV9KhuP1Kq4pG1xwAQbbBg1d09PS7vFpdPyNsDRi/jdEf2+uj7Ro48dPOhiWVXrlyXji4+b+7R2qCTamhYF8u90lsqx8qeKw9t3vyCbGLa0jffMccNa++JX8oN21iyXEJ2zGWud2Sg/5Y9DTOd96nK0otkUTX1Us48SwyC0mR6FkbVfFUTTfLhn3HvU0/dNnpSFlmy6pPzZpGzatJDAJhIy8KoAoD5qjLOPbrjgXfuA+RE3y/5xKy+5ZXZFQAYGWt/Qp3Yx5iP6FDis4Obvr0X2Bjral/9593L2TtvWDJXzvyk+mlDQnOy1dxe9N8y1HAsJkMXv+ETl3Sx8joVeQucvkpFe0ECEBhDDeY2U+z/5dX4zZ0j5Z/g0RtHOiG8fPVnF4Kji4BuABlYi3IiNQW6AZeLs4oMbT9HnsTnbsxPpN+TnL/aLkmrx1Itd1uzOiLNHz7KxwcfWXu0VVuWvvHuxUlubxLIuwi+QtXrCRYwWORuSnKv1bIvDcniH+/vv2F8/PxF8xe9z0F+nTQCAMVJbhQAUDHpcTmAbn/xHDzAFRs+vnXr2lq7welxuNGnXb+NGCImTAFIPj5I8+YsLEXL+o/g3j8CbhifDGH+wpd4H26fl86awy5rODjiVGnZUHZO/4exGd+fmJaOJDdD/RrAWAxCkEY0oqog6fNpHn8xe9Ud7zzS//7DJ+dZvqJ8taa43QMOaSQhIPLJ9HwCL6mP

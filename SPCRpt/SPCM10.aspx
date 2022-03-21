@@ -17,21 +17,17 @@
                 <ContentTemplate>
                     <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="10000">
                     </asp:Timer>
+                    <asp:Timer ID="Timer2" runat="server" OnTick="Timer2_Tick" Interval="10000">
+                    </asp:Timer>
 
                     <asp:Label ID="lblFrom" runat="server" Text="" Visible="false"></asp:Label>
                     <asp:Label ID="lblShift" runat="server" Text="" Visible="false"></asp:Label>
                     <asp:Label ID="lblMachineId" runat="server" Text="" Visible="false"></asp:Label>
 
-                     <td>
-                        <asp:DropDownList ID="ddlProductType" runat="server" AutoPostBack="True" Width="91px" Visible="false" Height="20px">
-                            <asp:ListItem Text="Positive" Value="Positive"></asp:ListItem>
-                            <asp:ListItem Text="Negative" Value="Negative"></asp:ListItem>
-                        </asp:DropDownList>
-                    </td>
-                    <td>
-                        <asp:DropDownList ID="ddlProductId" runat="server" AutoPostBack="True" Width="104px" Visible="false" Height="20px">
-                        </asp:DropDownList>
-                    </td>
+                    <asp:Label ID="lblProductType" runat="server" Text="" Visible="false"></asp:Label>
+
+                    <asp:Label ID="lblProductId" runat="server" Text="" Visible="false"></asp:Label>
+
                     <table width="100%">
                         <tr width="50%">
                             <td width="50%">
@@ -76,17 +72,17 @@
                                 </asp:ObjectDataSource>
                                 <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" OldValuesParameterFormatString="original_{0}"
                                     SelectMethod="GetData" TypeName="SPCRpt.dtSPCTableAdapters.SP_XBar_R_ChartTableAdapter">
-                                      <SelectParameters>
-                                            <asp:ControlParameter Name="ProductId" ControlID="ddlProductId" PropertyName="SelectedValue"
-                                                Type="String" DefaultValue="2.3STT" />
-                                            <asp:ControlParameter Name="ProductType" ControlID="ddlProductType" PropertyName="SelectedValue"
-                                                Type="String" DefaultValue="Negative"/>
-                                        </SelectParameters>
-                                    </asp:ObjectDataSource>
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="lblProductId" Name="ProductId"
+                                            PropertyName="Text" Type="String" />
+                                        <asp:ControlParameter ControlID="lblProductType" Name="ProductType"
+                                            PropertyName="Text" Type="String" />
+                                    </SelectParameters>
+                                </asp:ObjectDataSource>
                                 <%--</ContentTemplate>
                             </asp:TabPanel>
                         </asp:TabContainer>--%>
-                        </td>
+                            </td>
                         </tr>
                     </table>
                 </ContentTemplate>
