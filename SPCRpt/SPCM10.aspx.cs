@@ -20,17 +20,17 @@ namespace SPCRpt
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataAdapter sqlDap = new SqlDataAdapter();
         DataTable dtMachine = new DataTable();
-        DataTable dtProductIds = new DataTable();
+        string TimerToUpdateProducIDandMachinIDForDashboardInMins =Convert.ToString(ConfigurationManager.AppSettings["TimerToUpdateProducIDandMachinIDForDashboardInMins"]);
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-
+                this.Timer2.Interval = Convert.ToInt32(TimerToUpdateProducIDandMachinIDForDashboardInMins) * 1000 * 60;
                 GetMachineadnPeoductInfo();
-                DataTable dt = (DataTable)ViewState["dtMachine"];
-                if (dtMachine.Rows.Count > 0)
+                DataTable dtMachineInfo = (DataTable)ViewState["dtMachine"];
+                if (dtMachineInfo.Rows.Count > 0)
                 {
-                    DataRow dr = dt.Rows[Convert.ToInt32(ViewState["A"])];
+                    DataRow dr = dtMachineInfo.Rows[Convert.ToInt32(ViewState["A"])];
                     this.lblMachineId.Text = dr["MachineID"].ToString();
                     this.lblProductId.Text = dr["Product_Id"].ToString();
                     this.lblProductType.Text = dr["Product_Type"].ToString();
@@ -50,8 +50,7 @@ namespace SPCRpt
                 string[] strShift = GetShiftName();
                 this.lblFrom.Text = strShift[1];
                 this.lblShift.Text = strShift[0];
-                this.lblFrom.Text = "2019-05-09";
-                dtMachine = GetDistinctProductId(this.lblFrom.Text, DateTime.Now.ToString(), "SPCM10");
+                dtMachine = GetDistinctProductId(this.lblShift.Text, "SPCM10");
                 ViewState["dtMachine"] = dtMachine;
                 ViewState["B"] = dtMachine.Rows.Count;
                 ViewState["A"] = 0;
@@ -80,16 +79,19 @@ namespace SPCRpt
             this.lblFrom.Text = strShift[1];
             this.lblShift.Text = strShift[0];
             DataTable dt = (DataTable)ViewState["dtMachine"];
-            DataRow dr = dt.Rows[Convert.ToInt32(ViewState["A"])];
-            this.lblMachineId.Text = dr["MachineID"].ToString();
-            this.lblProductId.Text = dr["Product_Id"].ToString();
-            this.lblProductType.Text = dr["Product_Type"].ToString();
-            List<ReportParameter> paramList = new List<ReportParameter>();
-            paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
-            paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
-            paramList.Add(new ReportParameter("ProductType", this.lblProductType.Text, true));
-            this.rptTableView.LocalReport.SetParameters(paramList);
-            this.rptTableView.LocalReport.Refresh();
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[Convert.ToInt32(ViewState["A"])];
+                this.lblMachineId.Text = dr["MachineID"].ToString();
+                this.lblProductId.Text = dr["Product_Id"].ToString();
+                this.lblProductType.Text = dr["Product_Type"].ToString();
+                List<ReportParameter> paramList = new List<ReportParameter>();
+                paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
+                paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
+                paramList.Add(new ReportParameter("ProductType", this.lblProductType.Text, true));
+                this.rptTableView.LocalReport.SetParameters(paramList);
+                this.rptTableView.LocalReport.Refresh();
+            }
         }
 
         public string[] GetShiftName()
@@ -197,17 +199,16 @@ namespace SPCRpt
             return dtMachine;
         }
 
-        public DataTable GetDistinctProductId(string strFromdate, string strTodate, string URLName)
+        public DataTable GetDistinctProductId(string strShiftName, string URLName)
         {
             DataTable dtProductId = new DataTable();
             try
             {
                 sqlCon = new SqlConnection(strCon);
                 sqlCon.Open();
-                sqlCmd = new SqlCommand("select DISTINCT RS.ID,RS.URLName,RS.MachineId,WTM.Product_Type,WTM.Product_Id from tbl_SPC_Report_Settings(NOLOCK) RS left join tbl_Weight_Thickness_Measuring (NOLOCK) WTM ON RS.MachineId=WTM.Machine_Id WHERE RS.URLName=@URLName AND WTM.Date between @FromDate and @Todate ", sqlCon);
+                sqlCmd = new SqlCommand("select DISTINCT RS.ID, RS.URLName, RS.MachineId, IE.Product_Type, IE.Product_Id from tbl_SPC_Report_Settings(NOLOCK)RS left join tbl_Information_Entry(NOLOCK) IE ON RS.MachineId = IE.Machine_Id WHERE RS.URLName = @URLName AND IE.Shift = @ShiftName AND Product_Id is not null", sqlCon);
                 sqlCmd.Parameters.AddWithValue("@URLName", URLName);
-                sqlCmd.Parameters.AddWithValue("@FromDate", strFromdate + " 00:00:00.001");
-                sqlCmd.Parameters.AddWithValue("@Todate", strTodate);
+                sqlCmd.Parameters.AddWithValue("@ShiftName", strShiftName);
                 sqlDap = new SqlDataAdapter(sqlCmd);
                 sqlDap.Fill(dtProductId);
                 return dtProductId;
