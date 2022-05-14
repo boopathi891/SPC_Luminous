@@ -35,3 +35,13 @@ E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Rel
 E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\RdlCompile.compiled
 E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.dll
 E:\Projects\Boopathi\SPC Final\latest\Web\SPCRpt-27-11-2014(VRLA)\SPCRpt\obj\Release\SPCRpt.pdb
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\bin\SPCRpt.dll.config
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\bin\SPCRpt.dll
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\bin\SPCRpt.pdb
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\SPCRpt.csprojAssemblyReference.cache
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\RdlCompile.cache
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\RdlCompile.compiled
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\SPCRpt.csproj.CoreCompileInputs.cache
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\SPCRpt.csproj.CopyComplete
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\SPCRpt.dll
+C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Release\SPCRpt.pdb

@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SPCM1.aspx" />
+    <Content Include="SPCAnalysis.aspx" />
     <Content Include="SPCM2.aspx" />
     <Content Include="SPCM3.aspx" />
     <Content Include="SPCM4.aspx" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="SPCM1.aspx.designer.cs">
       <DependentUpon>SPCM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SPCAnalysis.aspx.cs">
+      <DependentUpon>SPCAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPCAnalysis.aspx.designer.cs">
+      <DependentUpon>SPCAnalysis.aspx</DependentUpon>
     </Compile>
     <Compile Include="SPCM2.aspx.cs">
       <DependentUpon>SPCM2.aspx</DependentUpon>
@@ -190,6 +198,8 @@
     <None Include="dtSPC.xss">
       <DependentUpon>dtSPC.xsd</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

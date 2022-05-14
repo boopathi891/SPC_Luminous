@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Boopathi-SPC\SPCDashBoard</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="bin/SPCRpt.dll">
+      <publishTime>05/14/2022 07:15:29</publishTime>
+    </File>
+    <File Include="bin/SPCRpt.pdb">
+      <publishTime>05/14/2022 07:15:29</publishTime>
+    </File>
+    <File Include="SPCAnalysis.aspx">
+      <publishTime>05/14/2022 06:38:59</publishTime>
+    </File>
+    <File Include="SPCM1.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM10.aspx">
+      <publishTime>05/14/2022 06:18:45</publishTime>
+    </File>
+    <File Include="SPCM2.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM3.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM4.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM5.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM6.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM7.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM8.aspx">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="SPCM9.aspx">
+      <publishTime>03/26/2022 23:00:35</publishTime>
+    </File>
+    <File Include="Styles/Site.css">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="Styles/Style.css">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="Styles/Style_IE.css">
+      <publishTime>12/03/2019 17:55:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/14/2022 07:04:39</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
