@@ -34,6 +34,7 @@ namespace SPCRpt
                     this.lblMachineId.Text = dr["MachineID"].ToString();
                     this.lblProductId.Text = dr["Product_Id"].ToString();
                     this.lblProductType.Text = dr["Product_Type"].ToString();
+                    FillGroupByCloumn(); // To fill the XBarChart Weight
                     List<ReportParameter> paramList = new List<ReportParameter>();
                     paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                     paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
@@ -50,12 +51,12 @@ namespace SPCRpt
             {
                 string[] strShift = GetShiftName();
                 this.lblFrom.Text = strShift[1];
+                this.lblFrom.Text = strShift[1];
                 this.lblShift.Text = strShift[0];
                 dtMachine = GetDistinctProductId(this.lblShift.Text, "SPCM09");
                 ViewState["dtMachine"] = dtMachine;
                 ViewState["B"] = dtMachine.Rows.Count;
                 ViewState["A"] = 0;
-
             }
             catch (Exception)
             {
@@ -86,6 +87,7 @@ namespace SPCRpt
                 this.lblMachineId.Text = dr["MachineID"].ToString();
                 this.lblProductId.Text = dr["Product_Id"].ToString();
                 this.lblProductType.Text = dr["Product_Type"].ToString();
+                FillGroupByCloumn(); // To fill the XBarChart Weight
                 List<ReportParameter> paramList = new List<ReportParameter>();
                 paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                 paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
@@ -217,6 +219,87 @@ namespace SPCRpt
             {
                 dtProductId = null;
                 return dtProductId;
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+        public void FillGroupByCloumn()
+        {
+            int intGroupSize = 1, i = 0, j = 1;
+            int N = 5;
+            bool boolDelete = DeleteTemp();
+            DataTable dtWTM = WieghtThicknessMeasuring(this.lblFrom.Text, this.lblFrom.Text, this.lblProductId.Text, this.lblProductType.Text, this.lblShift.Text, this.lblMachineId.Text, "ALL", "ALL");
+            for (i = 0; i < dtWTM.Rows.Count; i++)
+            {
+                if (j > N)
+                {
+                    intGroupSize++;
+                    j = 1;
+                }
+                DataRow dr = dtWTM.Rows[i];
+                bool bolInsert = InsertTemp(intGroupSize, Convert.ToDecimal(dr["Weight"].ToString()));
+                j++;
+            }
+        }
+        public bool DeleteTemp()
+        {
+            try
+            {
+                sqlCon = new SqlConnection(strCon);
+                sqlCon.Open();
+                SqlCommand sqlcmd = new SqlCommand("delete from tbl_temp_SPCDashboard", sqlCon);
+                sqlcmd.ExecuteNonQuery();
+                return true;
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+        public DataTable WieghtThicknessMeasuring(string strFromDate, string strToDate, string strProductId, string strProductType, string strShift, string strMachineId, string strMouldId, string strEmployee)
+        {
+            DataTable dtWTM = new DataTable();
+            try
+            {
+                sqlCon = new SqlConnection(strCon);
+                sqlCon.Open();
+                sqlCmd = new SqlCommand("SP_SPC_Data", sqlCon);
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@FromDate", strFromDate);
+                sqlCmd.Parameters.AddWithValue("@ToDate", strToDate);
+                sqlCmd.Parameters.AddWithValue("@ProductId", strProductId);
+                sqlCmd.Parameters.AddWithValue("@ProductType", strProductType);
+                sqlCmd.Parameters.AddWithValue("@Shift", strShift);
+                sqlCmd.Parameters.AddWithValue("@MachineId", strMachineId);
+                sqlCmd.Parameters.AddWithValue("@MouldId", strMouldId);
+                sqlCmd.Parameters.AddWithValue("@Employee", strEmployee);
+                sqlDap = new SqlDataAdapter(sqlCmd);
+                sqlDap.Fill(dtWTM);
+                return dtWTM;
+            }
+            catch (SqlException sqlExc)
+            {
+                return dtWTM;
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+
+        public bool InsertTemp(int intGroupNo, decimal strWeight)
+        {
+            try
+            {
+                sqlCon = new SqlConnection(strCon);
+                sqlCon.Open();
+                sqlCmd = new SqlCommand("INSERT INTO tbl_temp_SPCDashboard(GroupNo, Weight_Temp) VALUES (@GroupNo, @Weight)", sqlCon);
+                sqlCmd.Parameters.AddWithValue("@GroupNo", intGroupNo);
+                sqlCmd.Parameters.AddWithValue("@Weight", strWeight);
+                sqlCmd.ExecuteNonQuery();
+                return true;
             }
             finally
             {
