@@ -15,8 +15,8 @@
             </asp:ToolkitScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="10000">
-                    </asp:Timer>
+                   <%-- <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="10000">
+                    </asp:Timer>--%>
                     <asp:Label ID="lblFrom" runat="server" Text="" Visible="false"></asp:Label>
                     <asp:Label ID="lblShift" runat="server" Text="" Visible="false"></asp:Label>
                     <asp:Label ID="lblMachineId" runat="server" Text="" Visible="false"></asp:Label>

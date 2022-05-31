@@ -94,6 +94,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsCommon.cs" />
     <Compile Include="dtSPC.cs">
       <DependentUpon>dtSPC.xsd</DependentUpon>
     </Compile>

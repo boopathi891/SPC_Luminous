@@ -22,6 +22,7 @@ namespace SPCRpt
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataAdapter sqlDap = new SqlDataAdapter();
         DataTable dtMachine = new DataTable();
+        ClsCommon clsCommon = new ClsCommon();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,13 +31,13 @@ namespace SPCRpt
             string ProductID = string.Empty;
             string ProductType = string.Empty;
             string ShiftName = string.Empty;
-
+            string CurrentDate = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), dateTimeFormatterProvider).ToString("yyyy-MM-dd");
             if (!Page.IsPostBack)
             {
                 if (Request.QueryString != null)
                 {
                     strURL = Request.QueryString.ToString();
-                    NameValueCollection nameValueCollection = ParseQueryString(strURL);
+                    NameValueCollection nameValueCollection = HttpUtility.ParseQueryString(strURL);
                     if (nameValueCollection.Count > 3)
                     {
                         MachineID = nameValueCollection.Get(0);
@@ -46,6 +47,7 @@ namespace SPCRpt
                         this.lblMachineId.Text = MachineID;
                         this.lblProductId.Text = ProductID;
                         this.lblProductType.Text = ProductType;
+                        clsCommon.FillGroupByCloumn(CurrentDate, CurrentDate, this.lblProductId.Text, this.lblProductType.Text, ShiftName, this.lblMachineId.Text);
                         List<ReportParameter> paramList = new List<ReportParameter>();
                         paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                         paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));

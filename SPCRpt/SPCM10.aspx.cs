@@ -20,6 +20,7 @@ namespace SPCRpt
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataAdapter sqlDap = new SqlDataAdapter();
         DataTable dtMachine = new DataTable();
+        ClsCommon clsCommon = new ClsCommon();
         string TimerToUpdateProducIDandMachinIDForDashboardInMins =Convert.ToString(ConfigurationManager.AppSettings["TimerToUpdateProducIDandMachinIDForDashboardInMins"]);
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,6 +35,7 @@ namespace SPCRpt
                     this.lblMachineId.Text = dr["MachineID"].ToString();
                     this.lblProductId.Text = dr["Product_Id"].ToString();
                     this.lblProductType.Text = dr["Product_Type"].ToString();
+                    clsCommon.FillGroupByCloumn(this.lblFrom.Text, this.lblFrom.Text, this.lblProductId.Text, this.lblProductType.Text, this.lblShift.Text, this.lblMachineId.Text);
                     List<ReportParameter> paramList = new List<ReportParameter>();
                     paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                     paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
@@ -85,6 +87,7 @@ namespace SPCRpt
                 this.lblMachineId.Text = dr["MachineID"].ToString();
                 this.lblProductId.Text = dr["Product_Id"].ToString();
                 this.lblProductType.Text = dr["Product_Type"].ToString();
+                clsCommon.FillGroupByCloumn(this.lblFrom.Text, this.lblFrom.Text, this.lblProductId.Text, this.lblProductType.Text, this.lblShift.Text, this.lblMachineId.Text);
                 List<ReportParameter> paramList = new List<ReportParameter>();
                 paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                 paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
