@@ -69,6 +69,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DB Script\1.NewTableAndSP-01-06-2022.sql" />
     <Content Include="SPCM1.aspx" />
     <Content Include="SPCAnalysis.aspx" />
     <Content Include="SPCM2.aspx" />

@@ -14,13 +14,11 @@ namespace SPCRpt
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataAdapter sqlDap = new SqlDataAdapter();
         readonly object _lockObject = new object();
-        
+
         public void FillGroupByCloumn(string FromDate, string ToDate, string strProductID, string strProductType, string strShiftName, string strMachineId)
         {
             lock (_lockObject)
             {
-                FromDate = "2021-03-11";
-                ToDate = "2021-03-11";
                 int intGroupSize = 1, i = 0, j = 1;
                 int N = 5;
                 bool boolDelete = DeleteTemp();
