@@ -53,3 +53,15 @@ C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.C
 C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.CopyComplete
 C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.dll
 C:\Users\Boopathi\Documents\GitHub\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.pdb
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\SPCRpt.dll.config
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\SPCRpt.dll
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\SPCRpt.pdb
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.AssemblyReference.cache
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.CoreCompileInputs.cache
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.csproj.CopyComplete
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.dll
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\obj\Debug\SPCRpt.pdb
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Boopathi\SPC Luminous\SPC_Luminous\SPCRpt\bin\Microsoft.ReportViewer.WebForms.dll

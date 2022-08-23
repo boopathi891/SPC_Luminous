@@ -44,10 +44,13 @@ namespace SPCRpt
                         ProductID = nameValueCollection.Get(1);
                         ProductType = nameValueCollection.Get(2);
                         ShiftName = nameValueCollection.Get(3);
+                        string[] strShift = GetShiftName();
+                        this.lblFrom.Text = strShift[1];
+                        this.lblShift.Text = strShift[0];
                         this.lblMachineId.Text = MachineID;
                         this.lblProductId.Text = ProductID;
                         this.lblProductType.Text = ProductType;
-                        clsCommon.FillGroupByCloumn(CurrentDate, CurrentDate, this.lblProductId.Text, this.lblProductType.Text, ShiftName, this.lblMachineId.Text);
+                        clsCommon.FillGroupByCloumn(CurrentDate, CurrentDate, this.lblProductId.Text, this.lblProductType.Text, this.lblShift.Text, this.lblMachineId.Text);
                         List<ReportParameter> paramList = new List<ReportParameter>();
                         paramList.Add(new ReportParameter("MachineId", this.lblMachineId.Text, true));
                         paramList.Add(new ReportParameter("ProductID", this.lblProductId.Text, true));
